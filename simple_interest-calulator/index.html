@@ -1,0 +1,84 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+
+<div class="container">
+<!-- <div class=" col-12 text"> -->
+
+    <h3 class="text-warning">SIMPLE INTEREST CALCULATOR </h3>
+    <input type="number" id="P" class="mt-3  bg-primary-subtle border border-primary-subtle rounded-3" placeholder="principal amount"> <br><br>
+
+    
+    <input type="number" id="R" class="bg-primary-subtle border border-primary-subtle rounded-3" placeholder="rate of interest"> <br><br>
+
+    
+    <input type="number" id="T" class="bg-primary-subtle border border-primary-subtle rounded-3" placeholder="time"> <br> <br>
+
+    <button class="btn btn-secondary" onclick="myfunction()">CALCULATE</button> <br><br>
+
+    <h3>Simple interest : <span id="SI"></span></h3>
+
+</div>
+
+</div>
+
+<style>
+
+    *{
+        padding: 0;
+        margin: 0;
+       
+        
+    }
+   
+    /* .text{
+    justify-content: center;
+    text-align: center;
+    margin-top: 40px;
+    background-color: black;
+    box-sizing: content-box;
+    border: 1px solid;
+    } */
+
+
+    .container{
+        border: 1px solid;
+        margin: 30px auto;
+        text-align: center;
+        width: 500px;
+        background-color: black;
+        padding: 20px 10px;
+    }
+    input{
+        height: 5%;
+        width: 100%;
+        font-size: 20px;
+    }
+
+    button{
+        width: 100%;
+        height: 5%;
+        background-color: aquamarine;
+        font-weight: bold;
+    }
+    h3{
+        color: rgba(250, 250, 0, 0.795);
+    }
+</style>
+
+
+<script>
+
+    function myfunction(){
+
+        var P=document.getElementById('P').value;
+
+        var R=document.getElementById('R').value;
+
+        var T=document.getElementById('T').value;
+
+        var ans=(P*R*T)/100;
+
+        document.getElementById('SI').innerHTML=ans;
+    }
+</script>
